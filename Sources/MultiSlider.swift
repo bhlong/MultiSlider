@@ -314,7 +314,7 @@ open class MultiSlider: UIControl {
     }
 
     func updateValueLabel(_ i: Int) {
-        let dollar = String(repeating: "$", count: i+1)
+        let dollar = String(repeating: "$", count: value[i]+1)
         valueLabels[i].text = dollar
     }
 
