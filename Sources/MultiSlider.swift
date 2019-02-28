@@ -314,13 +314,8 @@ open class MultiSlider: UIControl {
     }
 
     func updateValueLabel(_ i: Int) {
-        let labelValue: CGFloat
-        if isValueLabelRelative {
-            labelValue = i > 0 ? value[i] - value[i - 1] : value[i] - minimumValue
-        } else {
-            labelValue = value[i]
-        }
-        valueLabels[i].text = valueLabelFormatter.string(from: NSNumber(value: Double(labelValue)))
+        let dollar = String(repeating: "$", count: i+1)
+        valueLabels[i].text = dollar
     }
 
     private func updateValueCount(_ count: Int) {
